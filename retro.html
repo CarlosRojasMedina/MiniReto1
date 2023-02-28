@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- 
+	Carlos Bernabe Rojas Medina A01641668
+	-->
+	<title>MiniReto</title>
+	<!-- 
+	Importo  bootstrap para luego implementarlo centrando un h1
+	-->
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	 <!-- 
+	Importo  Jquery para luego implementarlo cambiando  los h1 con un click a color azul
+	-->
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	 <!-- 
+	Función que cambia de color los h1 con un click utilizando jquery
+	-->
+    <script>
+
+      $(document).ready(function() {
+        $('h1').click(function() {
+          $(this).css('color', 'blue');
+        });
+      });
+    </script>
+    <!-- 
+	Declaro mis archivos js y css
+	-->
+	
+   <link rel="stylesheet" href="retro.css">
+   <!-- 
+	Estilo de mi página, tanto el formato de mis h1, las box utilizadas para los textos e imagenes así como parámetros y fonfo animado
+	-->
+	<style>
+
+			body {
+
+
+			background-color: #000000;
+			background-image: linear-gradient(to right, #666666 0%, #800080 100%);
+			background-size: 200% 200%;
+			animation: gradient 15s ease infinite;
+		}
+
+		
+		@keyframes gradient {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+
+		h1 {
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+			font-size: 48px;
+			margin-top: 100px;
+			text-shadow: 2px 2px #ffffff;
+		}
+
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.box {
+			width: 300px;
+			height: 300px;
+			background-color: #EA889A;
+			margin: 20px;
+			padding: 20px;
+			box-shadow: 5px 5px #FFFF00;
+		}
+
+		.box h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.box img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+
+		footer {
+			text-align: center;
+			background-color: #000000;
+			color: #ffffff;
+			padding: 10px;
+			margin-top: 50px;
+		}
+
+		@keyframes dots {
+			from {background-position: 0 0;}
+			to {background-position: 50px 50px;}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Tetra-Mania</h1>
+	</header>
+	<!-- 
+	  bootstrap aplicado al h1 de abajo centrandolo
+	-->
+ <div class="container">
+      <h1 class="text-center my-5">Sabes moverte en los bloques? </h1>
+      <i class="lead text-center">Envia tus mejores clips a a01641668@tec.mx  Carlos Rojas.</i>
+      </div>
+    </div>
+    <!-- 
+	importaciones de jqery y cloudfare para que funcionara mi implementacion de bootsrap sin afectar a la página en general
+	-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 
+	Cajas o box con imagenes y sus botones con funciones para ir a otra página
+	-->
+	<section>
+		<div class="box">
+			<img src="tetris.jpg" alt="Imagen 1">
+			<br>
+				<br>
+				
+			<i>"Tetris es vida... Tetris es amor pero sobre todo es diversión"<i>
+				<br>
+				
+		    <button type="button" onclick="loadDoc()">Conoce más sobre tetris</button>
+		</div>
+
+		<div class="box">
+			<img src="tetralove.jpg" alt="Imagen 2">
+			<br>
+				
+				<br>
+			<i>"Conoce como se mueven las piezas y la función de cada una!!!"<i>
+				<br>
+				<br>
+		    <button type="button" onclick="loadDoc1()">Tutorial</button>
+		</div>
+
+		<div class="box">
+			<img src="compe.jpg" alt="Imagen 3">
+			<br>
+				<br>
+			<i>"Se parte de una experiencia competitiva y conoce más jugadores"<i>
+				<br>
+				
+		    <button type="button" onclick="loadDoc3()">Conoce más sobre tetris</button>
+		</div>
+
+		<div class="box">
+			<img src="tetrio.png" alt="Imagen 5">
+				<br>
+				<br>
+			<i>"Prueba a jugar un poco de tetris con todo lo aprendido a continuación te dejo un enlace con el cual puedes acceder a la versión de vs más novedosa de tetris"<i>
+			
+				<br>
+		   <a href="https://tetr.io/" target="_blank">Juega aqui!</a>
+
+		</div>
+
+	</section>
+<div id="demo">
+    <button type="button" onclick="loadText()">Si leiste todo haz click</button>
+</div>
+	<footer>
+		<p>Contacto: A01641668@tec.mx</p>
+	</footer>
+	 <script  type="text/javascript" src="retro.js"></script>
+</body>
+</html>
